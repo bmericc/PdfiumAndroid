@@ -1,4 +1,4 @@
-package com.shockwave.pdfium;
+package com.github.bmericc.pdfium;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -8,7 +8,7 @@ import android.os.ParcelFileDescriptor;
 import android.util.Log;
 import android.view.Surface;
 
-import com.shockwave.pdfium.util.Size;
+import com.github.bmericc.pdfium.util.Size;
 
 import java.io.FileDescriptor;
 import java.io.IOException;

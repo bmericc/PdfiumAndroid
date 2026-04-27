@@ -3,7 +3,7 @@ Uses pdfium library [from AOSP](https://android.googlesource.com/platform/extern
 
 The demo app (for not modified lib) is [here](https://github.com/mshockwave/PdfiumAndroid-Demo-App)
 
-Forked for use with [AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer) project.
+Forked for use with [AndroidPdfViewer](https://github.com/bmericc/AndroidPdfViewer) project.
 
 API is highly compatible with original version, only additional methods were created.
 
@@ -18,7 +18,7 @@ API is highly compatible with original version, only additional methods were cre
 ## Installation
 Add to _build.gradle_:
 
-`compile 'com.github.barteksc:pdfium-android:1.9.0'`
+`compile 'com.github.bmericc:pdfium-android:1.9.0'`
 
 Library is available in jcenter and Maven Central repositories.
 

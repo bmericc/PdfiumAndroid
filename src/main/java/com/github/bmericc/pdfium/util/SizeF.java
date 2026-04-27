@@ -1,4 +1,4 @@
-package com.shockwave.pdfium.util;
+package com.github.bmericc.pdfium.util;
 
 public class SizeF {
     private final float width;

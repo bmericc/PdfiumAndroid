@@ -1,4 +1,4 @@
-package com.shockwave.pdfium;
+package com.github.bmericc.pdfium;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
