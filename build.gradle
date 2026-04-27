@@ -15,7 +15,7 @@ apply plugin: 'maven-publish'
 ext {
     publishedGroupId = 'com.github.bmericc'
     libraryName = 'PdfiumAndroid'
-    artifact = 'pdfium-android'
+    artifact = 'PdfiumAndroid'
     libraryVersion = '1.9.2'
 }
 
