@@ -5,34 +5,18 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.3'
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'pdfium-android'
-
     publishedGroupId = 'com.github.bmericc'
     libraryName = 'PdfiumAndroid'
-    artifact = 'pdfium-android'
-
-    libraryDescription = 'Fork of library for rendering PDFs on Android\'s Surface or Bitmap'
-
-    siteUrl = 'https://github.com/bmericc/PdfiumAndroid'
-    gitUrl = 'https://github.com/bmericc/PdfiumAndroid.git'
-
+    artifact = 'PdfiumAndroid'
     libraryVersion = '1.9.2'
-
-    developerId = 'bmericc'
-    developerName = 'Bahri Meriç Canlı'
-    developerEmail = 'bahri@bahri.info'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
 }
 
 android {
@@ -41,8 +25,7 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 3
-        versionName "1.9.2"
+        buildConfigField "String", "VERSION_NAME", '"1.9.2"'
     }
     buildTypes {
         release {
@@ -51,7 +34,7 @@ android {
         }
     }
 
-    sourceSets{
+    sourceSets {
         main {
             jni.srcDirs = []
             jniLibs.srcDir 'src/main/libs'
@@ -69,4 +52,15 @@ dependencies {
     implementation 'com.android.support:support-v4:26.1.0'
 }
 
-
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = publishedGroupId
+                artifactId = artifact
+                version = libraryVersion
+            }
+        }
+    }
+}

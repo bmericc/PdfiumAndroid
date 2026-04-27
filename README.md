@@ -11,7 +11,7 @@ API is highly compatible with original version, only additional methods were cre
 ## Installation
 Add to _build.gradle_:
 
-`implementation 'com.github.bmericc:pdfium-android:1.9.2'`
+`implementation 'com.github.bmericc:PdfiumAndroid:1.9.2'`
 
 Library is available in Maven Central repository.
 
