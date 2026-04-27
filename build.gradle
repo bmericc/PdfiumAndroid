@@ -24,7 +24,7 @@ ext {
     siteUrl = 'https://github.com/bmericc/PdfiumAndroid'
     gitUrl = 'https://github.com/bmericc/PdfiumAndroid.git'
 
-    libraryVersion = '1.9.1'
+    libraryVersion = '1.9.2'
 
     developerId = 'bmericc'
     developerName = 'Bahri Meriç Canlı'
@@ -41,8 +41,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 2
-        versionName "1.9.1"
+        versionCode 3
+        versionName "1.9.2"
     }
     buildTypes {
         release {

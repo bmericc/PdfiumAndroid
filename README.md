@@ -5,16 +5,13 @@ Forked for use with [AndroidPdfViewer](https://github.com/bmericc/AndroidPdfView
 
 API is highly compatible with original version, only additional methods were created.
 
-## What's new in 1.9.1?
-* Updated package name to `com.github.bmericc.pdfium`
-* Removed deprecated Bintray/JCenter plugins and repositories
-* Updated to Maven Central
-* Incremented version to 1.9.1
+## What's new in 1.9.2?
+* Updated version to 1.9.2
 
 ## Installation
 Add to _build.gradle_:
 
-`implementation 'com.github.bmericc:pdfium-android:1.9.1'`
+`implementation 'com.github.bmericc:pdfium-android:1.9.2'`
 
 Library is available in Maven Central repository.
 
