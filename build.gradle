@@ -27,8 +27,8 @@ ext {
     libraryVersion = '1.9.1'
 
     developerId = 'bmericc'
-    developerName = 'Bartosz Schiller'
-    developerEmail = 'bmericc@boo.pl'
+    developerName = 'Bahri Meriç Canlı'
+    developerEmail = 'bahri@bahri.info'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
