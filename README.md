@@ -5,13 +5,13 @@ Forked for use with [AndroidPdfViewer](https://github.com/bmericc/AndroidPdfView
 
 API is highly compatible with original version, only additional methods were created.
 
-## What's new in 1.9.2?
-* Updated version to 1.9.2
+## What's new in 1.9.3?
+* Updated version to 1.9.3
 
 ## Installation
 Add to _build.gradle_:
 
-`implementation 'com.github.bmericc:PdfiumAndroid:1.9.2'`
+`implementation 'com.github.bmericc:PdfiumAndroid:1.9.3'`
 
 Library is available in Maven Central repository.
 
