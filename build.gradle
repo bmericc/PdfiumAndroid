@@ -25,6 +25,7 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
+        buildConfigField "String", "VERSION_NAME", '"1.9.2"'
     }
     buildTypes {
         release {
