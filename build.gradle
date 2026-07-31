@@ -16,17 +16,17 @@ ext {
     publishedGroupId = 'com.github.bmericc'
     libraryName = 'PdfiumAndroid'
     artifact = 'PdfiumAndroid'
-    libraryVersion = '1.9.6'
+    libraryVersion = '1.9.7'
 }
 
 android {
     compileSdkVersion 26
-    ndkVersion '25.1.8937393'
+    ndkVersion '28.2.13676358'
 
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 26
-        buildConfigField "String", "VERSION_NAME", '"1.9.6"'
+        buildConfigField "String", "VERSION_NAME", '"1.9.7"'
 
         externalNativeBuild {
             ndkBuild {
