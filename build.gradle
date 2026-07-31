@@ -16,16 +16,23 @@ ext {
     publishedGroupId = 'com.github.bmericc'
     libraryName = 'PdfiumAndroid'
     artifact = 'PdfiumAndroid'
-    libraryVersion = '1.9.3'
+    libraryVersion = '1.9.4'
 }
 
 android {
     compileSdkVersion 26
+    ndkVersion '25.1.8937393'
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 26
-        buildConfigField "String", "VERSION_NAME", '"1.9.3"'
+        buildConfigField "String", "VERSION_NAME", '"1.9.4"'
+
+        externalNativeBuild {
+            ndkBuild {
+                arguments '-j' + Runtime.runtime.availableProcessors()
+            }
+        }
     }
     buildTypes {
         release {
@@ -34,10 +41,9 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            jni.srcDirs = []
-            jniLibs.srcDir 'src/main/libs'
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
         }
     }
 }
