@@ -16,7 +16,7 @@ ext {
     publishedGroupId = 'com.github.bmericc'
     libraryName = 'PdfiumAndroid'
     artifact = 'PdfiumAndroid'
-    libraryVersion = '1.9.8'
+    libraryVersion = '1.9.9'
 }
 
 android {
@@ -25,7 +25,7 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 26
-        buildConfigField "String", "VERSION_NAME", '"1.9.8"'
+        buildConfigField "String", "VERSION_NAME", '"1.9.9"'
     }
     buildTypes {
         release {
