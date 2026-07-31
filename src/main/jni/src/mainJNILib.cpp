@@ -212,7 +212,7 @@ JNI_FUNC(jlong, PdfiumCore, nativeOpenDocument)(JNI_ARGS, jint fd, jstring passw
 
         const long errorNum = FPDF_GetLastError();
         if(errorNum == FPDF_ERR_PASSWORD) {
-            jniThrowException(env, "com/shockwave/pdfium/PdfPasswordException",
+            jniThrowException(env, "com/github/bmericc/pdfium/PdfPasswordException",
                                     "Password required or incorrect password.");
         } else {
             char* error = getErrorDescription(errorNum);
@@ -255,7 +255,7 @@ JNI_FUNC(jlong, PdfiumCore, nativeOpenMemDocument)(JNI_ARGS, jbyteArray data, js
 
         const long errorNum = FPDF_GetLastError();
         if(errorNum == FPDF_ERR_PASSWORD) {
-            jniThrowException(env, "com/shockwave/pdfium/PdfPasswordException",
+            jniThrowException(env, "com/github/bmericc/pdfium/PdfPasswordException",
                                     "Password required or incorrect password.");
         } else {
             char* error = getErrorDescription(errorNum);
@@ -378,7 +378,7 @@ JNI_FUNC(jobject, PdfiumCore, nativeGetPageSizeByIndex)(JNI_ARGS, jlong docPtr, 
     jint widthInt = (jint) (width * dpi / 72);
     jint heightInt = (jint) (height * dpi / 72);
 
-    jclass clazz = env->FindClass("com/shockwave/pdfium/util/Size");
+    jclass clazz = env->FindClass("com/github/bmericc/pdfium/util/Size");
     jmethodID constructorID = env->GetMethodID(clazz, "<init>", "(II)V");
     return env->NewObject(clazz, constructorID, widthInt, heightInt);
 }
