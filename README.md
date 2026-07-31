@@ -5,15 +5,22 @@ Forked for use with [AndroidPdfViewer](https://github.com/bmericc/AndroidPdfView
 
 API is highly compatible with original version, only additional methods were created.
 
-## What's new in 1.9.3?
-* Updated version to 1.9.3
+## What's new in 1.9.10?
+* Native libraries rebuilt from upstream PDFium source (pdfium.googlesource.com)
+  via the standard depot_tools/GN/ninja toolchain, replacing the old prebuilt
+  binaries that shipped with no source in this repo
+* Everything (PDFium, FreeType, libpng, zlib, abseil) is now statically linked
+  into a single `libjniPdfium.so` per ABI instead of four separate libraries
+* All 64-bit ABIs (`arm64-v8a`, `x86_64`) are 16 KB page-size aligned
+* `libc++_shared.so` is bundled alongside `libjniPdfium.so` per ABI
 
 ## Installation
 Add to _build.gradle_:
 
-`implementation 'com.github.bmericc:PdfiumAndroid:1.9.3'`
+`implementation 'com.github.bmericc:PdfiumAndroid:v1.9.10'`
 
-Library is available in Maven Central repository.
+Resolved via [JitPack](https://jitpack.io/#bmericc/PdfiumAndroid) — add
+`maven { url 'https://jitpack.io' }` to your repositories.
 
 ## Usage example
 ``` java
