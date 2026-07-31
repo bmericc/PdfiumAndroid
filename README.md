@@ -5,6 +5,15 @@ Forked for use with [AndroidPdfViewer](https://github.com/bmericc/AndroidPdfView
 
 API is highly compatible with original version, only additional methods were created.
 
+## What's new in 1.9.11?
+* `libjniPdfium.so` now ships with embedded native debug symbols
+  (built with GN's `symbol_level=2`, `use_debug_fission=false`) so apps
+  that set `android.buildTypes.release.ndk.debugSymbolLevel = 'FULL'`
+  get proper Play Console crash symbolication instead of the "missing
+  native debug symbols" warning. AGP strips the symbols out of the
+  packaged `.so` automatically and bundles them separately — this does
+  not increase app size.
+
 ## What's new in 1.9.10?
 * Native libraries rebuilt from upstream PDFium source (pdfium.googlesource.com)
   via the standard depot_tools/GN/ninja toolchain, replacing the old prebuilt
@@ -17,7 +26,7 @@ API is highly compatible with original version, only additional methods were cre
 ## Installation
 Add to _build.gradle_:
 
-`implementation 'com.github.bmericc:PdfiumAndroid:v1.9.10'`
+`implementation 'com.github.bmericc:PdfiumAndroid:v1.9.11'`
 
 Resolved via [JitPack](https://jitpack.io/#bmericc/PdfiumAndroid) — add
 `maven { url 'https://jitpack.io' }` to your repositories.
